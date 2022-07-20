@@ -60,7 +60,7 @@
             // Notify_icon
             // 
             this.Notify_icon.Icon = ((System.Drawing.Icon)(resources.GetObject("Notify_icon.Icon")));
-            this.Notify_icon.Text = "VladYtDownloader";
+            this.Notify_icon.Text = "YAYD";
             this.Notify_icon.Visible = true;
             this.Notify_icon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Notify_icon_MouseDoubleClick);
             // 
