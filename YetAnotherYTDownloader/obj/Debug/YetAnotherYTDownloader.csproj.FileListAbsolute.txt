@@ -39,11 +39,6 @@ D:\LocalGit\VladYTdownloader\YetAnotherYTDownloader\obj\Debug\Yet Another Youtub
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\ytdl\yt-dlp.conf
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\ytdl\yt-dlp.exe
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\ytdl\ffmpeg.exe
-D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.exe.config
-D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.exe.manifest
-D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.application
-D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.exe
-D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.pdb
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Newtonsoft.Json.dll
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\System.ValueTuple.dll
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YoutubeDLSharp.dll
@@ -56,10 +51,15 @@ D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Form1.r
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Properties.Resources.resources
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.GenerateResource.cache
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CoreCompileInputs.cache
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.TrustInfo.xml
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.exe.manifest
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.application
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CopyComplete
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.exe
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.pdb
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\audio\soundBT1.wav
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YetAnotherYTDownloader.exe.config
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YetAnotherYTDownloader.exe.manifest
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YetAnotherYTDownloader.application
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YetAnotherYTDownloader.exe
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YetAnotherYTDownloader.pdb
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.TrustInfo.xml
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.exe.manifest
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.application
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.exe
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.pdb

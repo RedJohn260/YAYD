@@ -7,7 +7,7 @@
     <ProjectGuid>{DC87414C-118F-4A4F-9981-D33E720CEAF5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>YetAnotherYTDownloader</RootNamespace>
-    <AssemblyName>Yet Another Youtube Downloader</AssemblyName>
+    <AssemblyName>YetAnotherYTDownloader</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,7 +31,7 @@
     <SuiteName>RedJohn260.Inc</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
