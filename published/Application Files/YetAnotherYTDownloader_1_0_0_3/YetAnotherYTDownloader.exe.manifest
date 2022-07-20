@@ -4,41 +4,29 @@
   <description asmv2:iconFile="YAYD_icon.ico" asmv2:publisher="RedJohn260" co.v1:suiteName="RedJohn260.Inc" asmv2:product="Yet Another Youtube Downloader" asmv2:supportUrl="https://github.com/RedJohn260/YAYD" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="YetAnotherYTDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="YetAnotherYTDownloader" version="1.0.0.3" language="neutral" processorArchitecture="msil" />
     <commandLine file="YetAnotherYTDownloader.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
   <trustInfo>
     <security>
       <applicationRequestMinimum>
-        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" ID="Custom" SameSite="site">
-          <IPermission Read="USERNAME" version="1" class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-          <IPermission version="1" class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-          <IPermission version="1" Permanent="True" Expiry="9223372036854775807" UserQuota="9223372036854775807" Allowed="AssemblyIsolationByUser" class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-          <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ReflectionEmit, RestrictedMemberAccess" />
-          <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="Assertion, Execution, BindingRedirects" />
-          <IPermission version="1" class="System.Security.Permissions.UIPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-          <IPermission version="1" class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Level="DefaultPrinting" />
-          <IPermission version="1" class="System.Security.Permissions.MediaPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Audio="SafeAudio" Image="SafeImage" Video="SafeVideo" />
-          <IPermission version="1" class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Level="Safe" />
-          <IPermission version="1" class="System.Net.DnsPermission, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-          <IPermission version="1" class="System.Security.Permissions.TypeDescriptorPermission, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
-        </PermissionSet>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the
-          requestedExecutionLevel node with one of the following.
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward
-         compatibility then delete the requestedExecutionLevel node.
-    -->
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
     </security>
@@ -81,13 +69,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YetAnotherYTDownloader.exe" size="597440">
-      <assemblyIdentity name="YetAnotherYTDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="YetAnotherYTDownloader" version="1.0.0.3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SKbjZVnVC79ukA1274Sc4L6aZXZ1CECXDcbqrPMiJEM=</dsig:DigestValue>
+        <dsig:DigestValue>0sFOx5jT2VgoUQYMEW//wR55f2oN2KGTYtEn+u7Myp8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -157,4 +145,21 @@
       <dsig:DigestValue>V52PN6LS4vuPEAiQ9YVGLIVm6R9okHKMGL10FBdHiwg=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=GAMING-PC\RedJo" issuerKeyHash="d7a517af79fed57ba5bcf73225a9c86239244276" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>jFZ/z7TqVKV8MVeOOryhew72+fCss3xNufPz0h40b10=</DigestValue></Reference></SignedInfo><SignatureValue>jQ9F94ROu3dJYIsFdgMQ0zB6hR8cnJtpBitxENw1PDJfa7lDMDpGvxuNHJ8+yYw4rI4cwbUT21+z5nqLO2Ztqk5ZHv1qCa1SucJBOPMdIy2o2SmzvZGmWlUg0k7es12QyGQFTOSUHoAj4/r99xP51Qi79G1AMPMt78Dnd9KC/Hs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pqOodFGT6kJRiY3jJDJKcuLsVZ6ym9bH9sd1MRLw15zr0a4vzlL2ShD9Bn7ucLvD7Y5DSwG0iX9eBnaO1xBpn8uQSCysczO2QYqB2AWZKcZWolCirR2R52yCKNs9z/inm3fRRD6xImyE6exX5hGUek730QGTkl9NfShkODxrTpk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5d6f341ed2f3f3b94d7cb3acf0f9f60e7ba1bc3a8e57317ca554eab4cf7f568c" Description="" Url=""><as:assemblyIdentity name="YetAnotherYTDownloader.exe" version="1.0.0.3" publicKeyToken="87fb7437ffbe2861" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GAMING-PC\RedJo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EorGmp7UfEje+NCFduNmXGmov7TZ5PdBXya/FNJ+BQA=</DigestValue></Reference></SignedInfo><SignatureValue>QtAvLpgIFjiT6UHSksQIr36VES2bMxvN1jr2SZvnlp6yPUXn2Cr0WWvNNNHsrN7RXEq3O58mEUimJ/9V1oGJwokvTSp6ixFHoXZ0oTXPvyO2P75Z8shkRN45owpfmD2wirzDBFwZmQ5qDn4NUD9Haswa7+HL6mFXTAlmWdZAyw4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pqOodFGT6kJRiY3jJDJKcuLsVZ6ym9bH9sd1MRLw15zr0a4vzlL2ShD9Bn7ucLvD7Y5DSwG0iX9eBnaO1xBpn8uQSCysczO2QYqB2AWZKcZWolCirR2R52yCKNs9z/inm3fRRD6xImyE6exX5hGUek730QGTkl9NfShkODxrTpk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQGwjaBplRUa1OjCwD6nbVhzANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ARwBBAE0ASQBOAEcALQBQAEMAXABSAGUAZABKAG8wHhcNMjIwNzIwMTEzMTMxWhcNMjMwNzIwMTczMTMxWjApMScwJQYDVQQDHh4ARwBBAE0ASQBOAEcALQBQAEMAXABSAGUAZABKAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKajqHRRk+pCUYmN4yQySnLi7FWespvWx/bHdTES8Nec69GuL85S9koQ/QZ+7nC7w+2OQ0sBtIl/XgZ2jtcQaZ/LkEgsrHMztkGKgdgFmSnGVqJQoq0dkedsgijbPc/4p5t30UQ+sSJshOnsV+YRlHpO99EBk5JfTX0oZDg8a06ZAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAiVJSUBmSD/YtONGzXP6kx7i5oPa8a4eB4qmkk1VQXNrTTkYgUU/6AgbICQe4NG8UGBnBUMTyE0nudx3g5OIYMhZ4Uehc2wpLjPjqox20Uh38F+1bObjG6usiZHiz16u56R3nJQk+AenZgqa+KI4RVlkmqvKh8Zldbc1MJ3flSFo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=GAMING-PC\RedJo" issuerKeyHash="d7a517af79fed57ba5bcf73225a9c86239244276" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EPafYfiP1oJuxVv2E5EE/qXz5jaF8UQJUdAHwgBRxFo=</DigestValue></Reference></SignedInfo><SignatureValue>DFUW9yBlgHjP40RXLfZqOw9Ix9fBv1lK+tYFJpj/5PpvTd9NZIdvKIStFgVCi3T5SYWEWLYORS/T8dkYMbzIKsqQeDryL/TfhWwPCNlroqeBnRCJo50N2cLDw0g1QqMTbE1LJ++EFODgeEdqYm4xMzWnNFK2yNR7IHr8je13PRA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pqOodFGT6kJRiY3jJDJKcuLsVZ6ym9bH9sd1MRLw15zr0a4vzlL2ShD9Bn7ucLvD7Y5DSwG0iX9eBnaO1xBpn8uQSCysczO2QYqB2AWZKcZWolCirR2R52yCKNs9z/inm3fRRD6xImyE6exX5hGUek730QGTkl9NfShkODxrTpk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5ac45100c207d0510944f18536e6f3a5fe049113f65bc56e82d68ff8619ff610" Description="" Url=""><as:assemblyIdentity name="YetAnotherYTDownloader.exe" version="1.0.0.3" publicKeyToken="87fb7437ffbe2861" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GAMING-PC\RedJo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>i2mPQbBMRAeCpLPjQEef8RqYjUqJHEskiKmUasJigGM=</DigestValue></Reference></SignedInfo><SignatureValue>CmrMk37VVwSOVTFlt72ihoBDaLJUJkGKk3Cxs68K3i+ULicpdEocSlsg8AU5933axZO/jcFzE4+jhouCfPYcd4kfeoiJU4a2XeuKtFwUwW369Hwwx/Qd1ZDWbZmhWn6OopcEbEYFsyNbg8EQdDI1+z5ujHLCa2ZuFAZH5dISDF4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pqOodFGT6kJRiY3jJDJKcuLsVZ6ym9bH9sd1MRLw15zr0a4vzlL2ShD9Bn7ucLvD7Y5DSwG0iX9eBnaO1xBpn8uQSCysczO2QYqB2AWZKcZWolCirR2R52yCKNs9z/inm3fRRD6xImyE6exX5hGUek730QGTkl9NfShkODxrTpk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQGwjaBplRUa1OjCwD6nbVhzANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ARwBBAE0ASQBOAEcALQBQAEMAXABSAGUAZABKAG8wHhcNMjIwNzIwMTEzMTMxWhcNMjMwNzIwMTczMTMxWjApMScwJQYDVQQDHh4ARwBBAE0ASQBOAEcALQBQAEMAXABSAGUAZABKAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKajqHRRk+pCUYmN4yQySnLi7FWespvWx/bHdTES8Nec69GuL85S9koQ/QZ+7nC7w+2OQ0sBtIl/XgZ2jtcQaZ/LkEgsrHMztkGKgdgFmSnGVqJQoq0dkedsgijbPc/4p5t30UQ+sSJshOnsV+YRlHpO99EBk5JfTX0oZDg8a06ZAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAiVJSUBmSD/YtONGzXP6kx7i5oPa8a4eB4qmkk1VQXNrTTkYgUU/6AgbICQe4NG8UGBnBUMTyE0nudx3g5OIYMhZ4Uehc2wpLjPjqox20Uh38F+1bObjG6usiZHiz16u56R3nJQk+AenZgqa+KI4RVlkmqvKh8Zldbc1MJ3flSFo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

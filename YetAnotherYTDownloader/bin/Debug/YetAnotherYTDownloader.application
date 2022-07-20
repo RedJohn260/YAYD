@@ -13,14 +13,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="YetAnotherYTDownloader.exe.manifest" size="10290">
+    <dependentAssembly dependencyType="install" codebase="YetAnotherYTDownloader.exe.manifest" size="8974">
       <assemblyIdentity name="YetAnotherYTDownloader.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q7y679QUetdfgEeDa7FFdNX6474QN4VwjLrtM59wK2M=</dsig:DigestValue>
+        <dsig:DigestValue>GDS2VibG+w+oDQVkHrlJSkrCcvEvyJ8DL1/ZUhtmchQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
