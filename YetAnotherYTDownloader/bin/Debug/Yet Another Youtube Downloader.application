@@ -14,14 +14,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Yet Another Youtube Downloader.exe.manifest" size="8785">
+    <dependentAssembly dependencyType="install" codebase="Yet Another Youtube Downloader.exe.manifest" size="10101">
       <assemblyIdentity name="Yet Another Youtube Downloader.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x3UsMp5O5H1EyXDduMnriWP1cAwQti3drdVPRfE3RqA=</dsig:DigestValue>
+        <dsig:DigestValue>+BDG67lXUSFPmoWERLQNPbSVBAO25XfFuBtW98nPJPk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
