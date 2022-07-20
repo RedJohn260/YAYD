@@ -36,3 +36,21 @@ D:\LocalGit\VladYTdownloader\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownlo
 D:\LocalGit\VladYTdownloader\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CopyComplete
 D:\LocalGit\VladYTdownloader\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.exe
 D:\LocalGit\VladYTdownloader\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.pdb
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.exe.config
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.exe
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Yet Another Youtube Downloader.pdb
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Newtonsoft.Json.dll
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\System.ValueTuple.dll
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YoutubeDLSharp.dll
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Newtonsoft.Json.xml
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\System.ValueTuple.xml
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YoutubeDLSharp.xml
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.AssemblyReference.cache
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.SuggestedBindingRedirects.cache
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Form1.resources
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Properties.Resources.resources
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.GenerateResource.cache
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CoreCompileInputs.cache
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CopyComplete
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.exe
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\Yet Another Youtube Downloader.pdb

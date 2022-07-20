@@ -16,6 +16,8 @@ using System.Threading;
 using YoutubeDLSharp;
 using YoutubeDLSharp.Options;
 using YoutubeDLSharp.Metadata;
+using System.Net;
+using System.Diagnostics;
 
 namespace YetAnotherYTDownloader
 {
@@ -26,9 +28,10 @@ namespace YetAnotherYTDownloader
         private readonly string ytdl_app = "yt-dlp.exe";
         private readonly string ffmpeg_app = "ffmpeg.exe";
         private readonly string ytdl_path = @"ytdl\";
+        private string softwareVersion = "1.0.1";
         private readonly string app_directory = Environment.CurrentDirectory + @"\";//AppDomain.CurrentDomain.BaseDirectory;
         private bool IsDownloadingStarted = false;
-        private string video_path = Environment.CurrentDirectory + @"\videos\"; //AppDomain.CurrentDomain.BaseDirectory + @"videos\";
+        //private string video_path = Environment.CurrentDirectory + @"\videos\"; //AppDomain.CurrentDomain.BaseDirectory + @"videos\";
         private CancellationTokenSource cancelDownloadTokken;
         private bool IsNotDownloading;
         private IntPtr consoleHandle;
@@ -53,6 +56,7 @@ namespace YetAnotherYTDownloader
             consoleHandle = GetConsoleWindow();
             showconsole_chk.Checked = false;
             showconsole_chk.ImageIndex = 0;
+            ver_label.Text = "Version: " + softwareVersion;
         }
 
         private void Form1_Resize(object sender, EventArgs e)

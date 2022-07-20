@@ -54,6 +54,7 @@
             this.BtnStop = new ePOSOne.btnProduct.Custom_Button();
             this.BtnDownload = new ePOSOne.btnProduct.Custom_Button();
             this.BtnBrowse2 = new ePOSOne.btnProduct.Custom_Button();
+            this.ver_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Notify_icon
@@ -356,6 +357,18 @@
             this.BtnBrowse2.UseVisualStyleBackColor = true;
             this.BtnBrowse2.Click += new System.EventHandler(this.BtnBrowse2_Click);
             // 
+            // ver_label
+            // 
+            this.ver_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ver_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.ver_label.ForeColor = System.Drawing.Color.Silver;
+            this.ver_label.Location = new System.Drawing.Point(380, 420);
+            this.ver_label.Name = "ver_label";
+            this.ver_label.Size = new System.Drawing.Size(126, 24);
+            this.ver_label.TabIndex = 7;
+            this.ver_label.Text = "Version : 1.0.1";
+            this.ver_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -379,6 +392,7 @@
             this.Controls.Add(this.souce_label);
             this.Controls.Add(this.source_textbox);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.ver_label);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -422,6 +436,7 @@
         private System.Windows.Forms.ImageList chk_imageList;
         private System.Windows.Forms.CheckBox showconsole_chk;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label ver_label;
     }
 }
 
