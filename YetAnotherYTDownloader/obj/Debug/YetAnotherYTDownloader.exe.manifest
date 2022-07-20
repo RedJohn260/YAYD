@@ -68,14 +68,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YetAnotherYTDownloader.exe" size="597440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YetAnotherYTDownloader.exe" size="596480">
       <assemblyIdentity name="YetAnotherYTDownloader" version="1.0.0.3" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0sFOx5jT2VgoUQYMEW//wR55f2oN2KGTYtEn+u7Myp8=</dsig:DigestValue>
+        <dsig:DigestValue>eDLOxzDrBSTtbZIUpnjM/C9t3II6ZyuN49Ce5pvX/pY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
