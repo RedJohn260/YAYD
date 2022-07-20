@@ -51,10 +51,10 @@
             this.chk_imageList = new System.Windows.Forms.ImageList(this.components);
             this.showconsole_chk = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.ver_label = new System.Windows.Forms.Label();
             this.BtnStop = new ePOSOne.btnProduct.Custom_Button();
             this.BtnDownload = new ePOSOne.btnProduct.Custom_Button();
             this.BtnBrowse2 = new ePOSOne.btnProduct.Custom_Button();
-            this.ver_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Notify_icon
@@ -94,12 +94,12 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(12, 420);
+            this.label4.Location = new System.Drawing.Point(470, 421);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(318, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "© 2022 RedJohn260 All Rights Reversed";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // openFileDialog1
             // 
@@ -159,6 +159,7 @@
             // 
             // downloadProgressBar
             // 
+            this.downloadProgressBar.BackColor = System.Drawing.Color.Silver;
             this.downloadProgressBar.ForeColor = System.Drawing.Color.Lime;
             this.downloadProgressBar.Location = new System.Drawing.Point(12, 293);
             this.downloadProgressBar.Name = "downloadProgressBar";
@@ -171,7 +172,7 @@
             this.textBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.textBox2.ForeColor = System.Drawing.Color.Orange;
-            this.textBox2.Location = new System.Drawing.Point(13, 256);
+            this.textBox2.Location = new System.Drawing.Point(13, 259);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(776, 37);
             this.textBox2.TabIndex = 10;
@@ -242,7 +243,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(-9, 222);
+            this.label2.Location = new System.Drawing.Point(-9, 224);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(820, 63);
             this.label2.TabIndex = 5;
@@ -269,7 +270,7 @@
             this.showconsole_chk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showconsole_chk.ImageIndex = 0;
             this.showconsole_chk.ImageList = this.chk_imageList;
-            this.showconsole_chk.Location = new System.Drawing.Point(723, 416);
+            this.showconsole_chk.Location = new System.Drawing.Point(151, 417);
             this.showconsole_chk.Name = "showconsole_chk";
             this.showconsole_chk.Size = new System.Drawing.Size(66, 34);
             this.showconsole_chk.TabIndex = 22;
@@ -281,12 +282,24 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(529, 421);
+            this.label7.Location = new System.Drawing.Point(9, 421);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(260, 24);
+            this.label7.Size = new System.Drawing.Size(153, 24);
             this.label7.TabIndex = 7;
             this.label7.Text = "[DEBUG console]: ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ver_label
+            // 
+            this.ver_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ver_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.ver_label.ForeColor = System.Drawing.Color.Silver;
+            this.ver_label.Location = new System.Drawing.Point(223, 421);
+            this.ver_label.Name = "ver_label";
+            this.ver_label.Size = new System.Drawing.Size(241, 24);
+            this.ver_label.TabIndex = 7;
+            this.ver_label.Text = "Version : 1.0.1";
+            this.ver_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BtnStop
             // 
@@ -301,8 +314,8 @@
             this.BtnStop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BtnStop.Location = new System.Drawing.Point(433, 337);
             this.BtnStop.Name = "BtnStop";
-            this.BtnStop.OnHoverBorderColor = System.Drawing.Color.Green;
-            this.BtnStop.OnHoverButtonColor = System.Drawing.Color.Green;
+            this.BtnStop.OnHoverBorderColor = System.Drawing.Color.Cyan;
+            this.BtnStop.OnHoverButtonColor = System.Drawing.Color.Cyan;
             this.BtnStop.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BtnStop.Size = new System.Drawing.Size(355, 53);
             this.BtnStop.TabIndex = 18;
@@ -324,8 +337,8 @@
             this.BtnDownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BtnDownload.Location = new System.Drawing.Point(12, 337);
             this.BtnDownload.Name = "BtnDownload";
-            this.BtnDownload.OnHoverBorderColor = System.Drawing.Color.Green;
-            this.BtnDownload.OnHoverButtonColor = System.Drawing.Color.Green;
+            this.BtnDownload.OnHoverBorderColor = System.Drawing.Color.Cyan;
+            this.BtnDownload.OnHoverButtonColor = System.Drawing.Color.Cyan;
             this.BtnDownload.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BtnDownload.Size = new System.Drawing.Size(355, 53);
             this.BtnDownload.TabIndex = 15;
@@ -347,8 +360,8 @@
             this.BtnBrowse2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BtnBrowse2.Location = new System.Drawing.Point(669, 165);
             this.BtnBrowse2.Name = "BtnBrowse2";
-            this.BtnBrowse2.OnHoverBorderColor = System.Drawing.Color.Green;
-            this.BtnBrowse2.OnHoverButtonColor = System.Drawing.Color.Green;
+            this.BtnBrowse2.OnHoverBorderColor = System.Drawing.Color.Cyan;
+            this.BtnBrowse2.OnHoverButtonColor = System.Drawing.Color.Cyan;
             this.BtnBrowse2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BtnBrowse2.Size = new System.Drawing.Size(111, 29);
             this.BtnBrowse2.TabIndex = 13;
@@ -356,18 +369,6 @@
             this.BtnBrowse2.TextColor = System.Drawing.Color.Silver;
             this.BtnBrowse2.UseVisualStyleBackColor = true;
             this.BtnBrowse2.Click += new System.EventHandler(this.BtnBrowse2_Click);
-            // 
-            // ver_label
-            // 
-            this.ver_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ver_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ver_label.ForeColor = System.Drawing.Color.Silver;
-            this.ver_label.Location = new System.Drawing.Point(380, 420);
-            this.ver_label.Name = "ver_label";
-            this.ver_label.Size = new System.Drawing.Size(126, 24);
-            this.ver_label.TabIndex = 7;
-            this.ver_label.Text = "Version : 1.0.1";
-            this.ver_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -401,6 +402,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

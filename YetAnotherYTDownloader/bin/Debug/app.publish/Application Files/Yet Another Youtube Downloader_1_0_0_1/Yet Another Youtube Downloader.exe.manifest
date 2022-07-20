@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Yet Another Youtube Downloader.exe" version="1.0.0.1" publicKeyToken="87fb7437ffbe2861" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="YAYD_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Yet Another Youtube Downloader" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Yet Another Youtube Downloader.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" ID="Custom" SameSite="site">
+          <IPermission version="1" class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Access="Open" />
+          <IPermission UserQuota="1024000" version="1" class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Allowed="ApplicationIsolationByUser" />
+          <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="Execution" />
+          <IPermission version="1" class="System.Security.Permissions.UIPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Clipboard="OwnClipboard" Window="SafeTopLevelWindows" />
+          <IPermission version="1" class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Level="SafePrinting" />
+          <IPermission version="1" class="System.Security.Permissions.MediaPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Audio="SafeAudio" Image="SafeImage" Video="SafeVideo" />
+          <IPermission version="1" class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Level="Safe" />
+        </PermissionSet>
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.ValueTuple.dll" size="25232">
+      <assemblyIdentity name="System.ValueTuple" version="4.0.3.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6QXRAlhbIsbfBPIZr1y9v6e8Fll56XiLYt9tzBZeEPQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Yet Another Youtube Downloader.exe" size="597440">
+      <assemblyIdentity name="Yet Another Youtube Downloader" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6oK0bcGHofjJW8S04wp/eGzYayicO9vzrliyv2xXUf8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YoutubeDLSharp.dll" size="87040">
+      <assemblyIdentity name="YoutubeDLSharp" version="0.4.2.2271" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MQZUh4Vnt9xCf0WSU/dLEtjfA4snn5BditO+W5IDPpo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="audio\soundBT1.wav" size="80116">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZiD5WsHMOEldzI6k358e8+nQc0JI/7KC7wQPH8TWbxg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="YAYD_icon.ico" size="186837">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0PdIBBUoVos6qOXuZuKlcEK7ooPbFX2xk5uevEhzx2A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Yet Another Youtube Downloader.exe.config" size="536">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/H7Ndl7hVdhUXNF6Wz+aSCG9zJJ/xoEHlK2G5uvBSvw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ytdl\ffmpeg.exe" size="79434240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>k/2kUoWn20OgMN0nFHBwTNffJkZb0S10i036N7NBusI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ytdl\yt-dlp.conf" size="47">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>krSaYz85TUZjMn1A6rNx2fm35FvIHstO4IcdQbMkKwQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ytdl\yt-dlp.exe" size="14013584">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>V52PN6LS4vuPEAiQ9YVGLIVm6R9okHKMGL10FBdHiwg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=GAMING-PC\RedJo" issuerKeyHash="d7a517af79fed57ba5bcf73225a9c86239244276" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>otLfQ3e31nIf4MprJYsa6riAtQiUNGKTp8veVQHXYpU=</DigestValue></Reference></SignedInfo><SignatureValue>chYKZEHMK3ETaTYI/6ygE2XS9nJWLxu5WY6zEa5AEYpaNSVVRkHrdoOTRcBkqVSTzMRDdn4nHaFULs82FB++7xUD1QpOxRKZcjhazIRii7AHP84DgvoUQo3SV6q6qY0QAdYSzsogdVnvlW0EEhbCJ49Kg5ar69yLO+v++idVWp4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pqOodFGT6kJRiY3jJDJKcuLsVZ6ym9bH9sd1MRLw15zr0a4vzlL2ShD9Bn7ucLvD7Y5DSwG0iX9eBnaO1xBpn8uQSCysczO2QYqB2AWZKcZWolCirR2R52yCKNs9z/inm3fRRD6xImyE6exX5hGUek730QGTkl9NfShkODxrTpk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9562d70155decba79362349408b580b8ea1a8b256bcae01f72d6b77743dfd2a2" Description="" Url=""><as:assemblyIdentity name="Yet Another Youtube Downloader.exe" version="1.0.0.1" publicKeyToken="87fb7437ffbe2861" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GAMING-PC\RedJo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9y0bV2hoIamExfw2AnjONUH4xNewr2VO1amb2zoE7k4=</DigestValue></Reference></SignedInfo><SignatureValue>nAN7FO3KwtFhdkYpAJpNe3sSX+oD6kauWeA/p1Qyc+zvtf7Gg28z2aFspM2GmBD2qdYsZ6Kvn6qyR3jPjbfTQZTYWELXDg3CbEW+Y3fW3H+skOcMXAs4l6aXwecZDS4oGd5K6WciA/DvRlUhcwXSDogu7Rf2+/BsXGTdDB31gNE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pqOodFGT6kJRiY3jJDJKcuLsVZ6ym9bH9sd1MRLw15zr0a4vzlL2ShD9Bn7ucLvD7Y5DSwG0iX9eBnaO1xBpn8uQSCysczO2QYqB2AWZKcZWolCirR2R52yCKNs9z/inm3fRRD6xImyE6exX5hGUek730QGTkl9NfShkODxrTpk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQGwjaBplRUa1OjCwD6nbVhzANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ARwBBAE0ASQBOAEcALQBQAEMAXABSAGUAZABKAG8wHhcNMjIwNzIwMTEzMTMxWhcNMjMwNzIwMTczMTMxWjApMScwJQYDVQQDHh4ARwBBAE0ASQBOAEcALQBQAEMAXABSAGUAZABKAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKajqHRRk+pCUYmN4yQySnLi7FWespvWx/bHdTES8Nec69GuL85S9koQ/QZ+7nC7w+2OQ0sBtIl/XgZ2jtcQaZ/LkEgsrHMztkGKgdgFmSnGVqJQoq0dkedsgijbPc/4p5t30UQ+sSJshOnsV+YRlHpO99EBk5JfTX0oZDg8a06ZAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAiVJSUBmSD/YtONGzXP6kx7i5oPa8a4eB4qmkk1VQXNrTTkYgUU/6AgbICQe4NG8UGBnBUMTyE0nudx3g5OIYMhZ4Uehc2wpLjPjqox20Uh38F+1bObjG6usiZHiz16u56R3nJQk+AenZgqa+KI4RVlkmqvKh8Zldbc1MJ3flSFo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

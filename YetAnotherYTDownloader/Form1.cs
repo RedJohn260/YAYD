@@ -1,23 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Security.AccessControl;
 using System.Threading;
 using YoutubeDLSharp;
 using YoutubeDLSharp.Options;
 using YoutubeDLSharp.Metadata;
-using System.Net;
-using System.Diagnostics;
+using System.Reflection;
+using System.Media;
 
 namespace YetAnotherYTDownloader
 {
@@ -28,13 +20,11 @@ namespace YetAnotherYTDownloader
         private readonly string ytdl_app = "yt-dlp.exe";
         private readonly string ffmpeg_app = "ffmpeg.exe";
         private readonly string ytdl_path = @"ytdl\";
-        private string softwareVersion = "1.0.1";
         private readonly string app_directory = Environment.CurrentDirectory + @"\";//AppDomain.CurrentDomain.BaseDirectory;
-        private bool IsDownloadingStarted = false;
-        //private string video_path = Environment.CurrentDirectory + @"\videos\"; //AppDomain.CurrentDomain.BaseDirectory + @"videos\";
         private CancellationTokenSource cancelDownloadTokken;
-        private bool IsNotDownloading;
         private IntPtr consoleHandle;
+        private bool isVideoPostProcessing = false;
+        private bool isVideoDownloading = false;
 
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -56,7 +46,8 @@ namespace YetAnotherYTDownloader
             consoleHandle = GetConsoleWindow();
             showconsole_chk.Checked = false;
             showconsole_chk.ImageIndex = 0;
-            ver_label.Text = "Version: " + softwareVersion;
+            WriteColorLine("YAYD " + GetVersion + " Started!", ConsoleColor.Cyan);
+            ver_label.Text = "YAYD " + GetVersion;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -85,6 +76,7 @@ namespace YetAnotherYTDownloader
         {
             try
             {
+                PlaySound("SoundBT1.wav");
                 if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 {
                     var onlyFileName = Path.GetFullPath(folderBrowserDialog1.SelectedPath);
@@ -94,7 +86,7 @@ namespace YetAnotherYTDownloader
             catch (Exception exception1)
             {
                 MessageBox.Show("Error while browsing for files:" + "\n" + exception1.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Console.WriteLine("Error while browsing for files:" + "\n" + exception1.Message);
+                WriteColorLineError("Error while browsing for files:" + "\n" + exception1.Message);
             }
         }
 
@@ -102,42 +94,47 @@ namespace YetAnotherYTDownloader
         {
             try
             {
-                IsDownloadingStarted = true;
-                if (IsDownloadingStarted == true)
+                if (source_textbox.Text == String.Empty)
                 {
-                    try
-                    {
-                        await getSongTitle();
-                        await downloadSong();
-                    }
-                    catch (Exception exception2)
-                    {
-                        MessageBox.Show(exception2.Message.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Console.WriteLine(exception2.Message);
-                    }
+                    WriteColorLineError("Video link is missing, please paste your youtube link.");
+                    MessageBox.Show("Video link is missing!\nPlease paste your youtube link.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Downloading is Stopped, Press Start Button", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PlaySound("SoundBT1.wav");
+                    if (!isVideoPostProcessing)
+                    {
+                        speedlb.ForeColor = Color.DeepSkyBlue;
+                        etalb.ForeColor = Color.Yellow;
+                        await getSongTitle();
+                        await downloadSong();
+                    }
+                    else
+                    {
+                        WriteColorLineError("Wait!\nVideo is still postprocessing.");
+                        MessageBox.Show("Wait!\nVideo is still postprocessing.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception exception3)
             {
-                Console.WriteLine(exception3.Message);
+                WriteColorLineError(exception3.Message);
             }
         }
 
         private void BtnStop_Click(object sender, EventArgs e)
         {
-            IsDownloadingStarted = false;
-            IsNotDownloading = true;
-            cancelDownloadTokken.Cancel();
-            //textBox1.Text = "Download stopped...";
-            textBox1.ForeColor = Color.Red;
-            speedlb.Text = "Speed: " + "0.0 KB/S";
-            speedlb.ForeColor = Color.Red;
-            etalb.Text = "ETA: " + "00:00";
-            etalb.ForeColor = Color.Red;
+            PlaySound("SoundBT1.wav");
+            if (isVideoDownloading || isVideoPostProcessing)
+            {
+                textBox1.Text = "Download stopped...";
+                textBox1.ForeColor = Color.Red;
+                speedlb.Text = "Speed: " + "0.0 KB/S";
+                speedlb.ForeColor = Color.Red;
+                etalb.Text = "ETA: " + "00:00";
+                etalb.ForeColor = Color.Red;
+                cancelDownloadTokken.Cancel();
+            }
         }
 
         private void Label1_MouseDown(object sender, MouseEventArgs e)
@@ -151,7 +148,6 @@ namespace YetAnotherYTDownloader
 
         private async Task downloadSong()
         {
-            IsNotDownloading = false;
             var ytdl = new YoutubeDL();
             // set the path of the youtube-dl and FFmpeg if they're not in PATH or current directory
             ytdl.YoutubeDLPath = app_directory + ytdl_path + ytdl_app;
@@ -160,7 +156,7 @@ namespace YetAnotherYTDownloader
             ytdl.OutputFolder = destination_textbox.Text + @"\";
             // a progress handler with a callback that updates a progress bar
             var bar_progress = new Progress<DownloadProgress>((p) => showProgress(p));
-            Console.WriteLine(bar_progress.ToString());
+            //Console.WriteLine(bar_progress.ToString());
             // a cancellation token source used for cancelling the download
             // use `cts.Cancel();` to perform cancellation
             cancelDownloadTokken = new CancellationTokenSource();
@@ -170,10 +166,10 @@ namespace YetAnotherYTDownloader
             string path = result.Data;
             if (result.Success)
             {
-                IsNotDownloading = true;
                 cancelDownloadTokken.Cancel();
-                //textBox1.Text = "Download stopped...";
-                textBox1.ForeColor = Color.Red;
+                textBox1.Text = "Processing Finished!";
+                MessageBox.Show("Video Postprocessing Finished!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //textBox1.ForeColor = Color.Red;
                 speedlb.Text = "Speed: " + "0.0 KB/S";
                 speedlb.ForeColor = Color.Red;
                 etalb.Text = "ETA: " + "00:00";
@@ -182,9 +178,8 @@ namespace YetAnotherYTDownloader
             }
             else
             {
-                IsNotDownloading = true;
                 cancelDownloadTokken.Cancel();
-                //textBox1.Text = "Download stopped...";
+                textBox1.Text = "Download Error !!!";
                 textBox1.ForeColor = Color.Red;
                 speedlb.Text = "Speed: " + "0.0 KB/S";
                 speedlb.ForeColor = Color.Red;
@@ -204,16 +199,36 @@ namespace YetAnotherYTDownloader
             var res1 = await ytdl.RunVideoDataFetch(source_textbox.Text);
             VideoData video = res1.Data;
             var songTitle = video.Title;
+            WriteColorLine($"\n\nLink from: Youtube \nSong Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
             textBox2.Text = songTitle;
             textBox2.ForeColor = Color.OrangeRed;
         }
 
         private void showProgress(DownloadProgress p)
         {
-            textBox1.ForeColor = Color.Lime;
-            textBox1.Text = p.State.ToString();
+            string progress_state = p.State.ToString();
+            if (progress_state.Contains("Processing"))
+            {
+                textBox1.ForeColor = Color.Yellow;
+                isVideoPostProcessing = true;
+                isVideoDownloading = false;
+            }
+            else
+            {
+                textBox1.ForeColor = Color.Lime;
+                isVideoPostProcessing = false;
+            }
+            if (progress_state.Contains("Downloading"))
+            {
+                isVideoDownloading = true;
+            }
+            else
+            {
+                isVideoDownloading = false;
+            }
+            textBox1.Text =progress_state;
             downloadProgressBar.Value = (int)(p.Progress * 100.0f);
-            Console.WriteLine( $"speed: {p.DownloadSpeed} | left: {p.ETA}");
+            WriteColorLine( $"speed: {p.DownloadSpeed} | left: {p.ETA}\n", ConsoleColor.Magenta);
             speedlb.Text = "Speed: " + p.DownloadSpeed;
             etalb.Text = "ETA: " + p.ETA;
         }
@@ -229,19 +244,56 @@ namespace YetAnotherYTDownloader
 
         private void showconsole_chk_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            PlaySound("SoundBT1.wav");
             if (showconsole_chk.Checked)
             {
                 showconsole_chk.ImageIndex = 1;
                 ShowWindow(consoleHandle, SW_SHOW);
-                Console.WriteLine("Debug console disabled!");
+                WriteColorLine("Debug console enabled!", ConsoleColor.Green);
             }
             else
             {
                 showconsole_chk.ImageIndex = 0;
                 ShowWindow(consoleHandle, SW_HIDE);
-                Console.WriteLine("Debug console enabled!");
+                WriteColorLine("Debug console disabled!", ConsoleColor.Red);
             }
+        }
+
+        public string GetVersion
+        {
+            get
+            {
+                if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+                {
+                    Version ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+                    return string.Format("Version: {0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision, Assembly.GetEntryAssembly().GetName().Name);
+                }
+                else
+                {
+                    var ver = Assembly.GetExecutingAssembly().GetName().Version;
+                    return string.Format("Version: {0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision, Assembly.GetEntryAssembly().GetName().Name);
+                }
+            }
+        }
+
+        private void WriteColorLine(string value, ConsoleColor consoleColor)
+        {
+            Console.ForegroundColor = consoleColor;
+            Console.WriteLine(value.PadRight(Console.WindowWidth - 1));
+            Console.ResetColor();
+        }
+        private void WriteColorLineError(string value)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(value.PadRight(Console.WindowWidth - 1));
+            Console.ResetColor();
+        }
+
+        private void PlaySound(string audioFileName)
+        {
+            string audioFolder = app_directory + @"audio\";
+            SoundPlayer soundPlayer = new SoundPlayer(soundLocation: audioFolder + audioFileName);
+            soundPlayer.Play();
         }
     }
 }
