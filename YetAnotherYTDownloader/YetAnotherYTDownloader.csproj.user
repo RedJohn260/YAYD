@@ -3,7 +3,7 @@
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
     <PublishUrlHistory>D:\LocalGit\YAYD\published\|publish\</PublishUrlHistory>
-    <InstallUrlHistory>https://github.com/RedJohn260/YAYD/blob/main/published/</InstallUrlHistory>
+    <InstallUrlHistory>https://raw.githubusercontent.com/RedJohn260/YAYD/main/published/|https://github.com/RedJohn260/YAYD/blob/main/published/</InstallUrlHistory>
     <SupportUrlHistory>https://github.com/RedJohn260/YAYD</SupportUrlHistory>
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
