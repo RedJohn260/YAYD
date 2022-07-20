@@ -1,0 +1,8 @@
+AddType application/microsoftpatch .msp
+AddType application/microsoftupdate .msu 
+
+AddType application/x-ms-application .application  
+AddType application/x-ms-application .manifest  
+AddType application/octet stream .deploy   
+
+AddType application/x-ms-vsto .vsto
