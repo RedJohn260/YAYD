@@ -160,8 +160,15 @@ namespace YetAnotherYTDownloader
             // a cancellation token source used for cancelling the download
             // use `cts.Cancel();` to perform cancellation
             cancelDownloadTokken = new CancellationTokenSource();
+            // audio options
+            var options = new OptionSet()
+            {
+                Format = "bestaudio/best",
+                AudioFormat = AudioConversionFormat.Mp3,
+                AudioQuality = 0
+            };
             // download a audio
-            var result = await ytdl.RunAudioDownload(source_textbox.Text, AudioConversionFormat.Mp3, progress: bar_progress, ct: cancelDownloadTokken.Token);
+            var result = await ytdl.RunAudioDownload(source_textbox.Text, AudioConversionFormat.Mp3, progress: bar_progress, ct: cancelDownloadTokken.Token, overrideOptions: options);
             // the path of the downloaded file
             string path = result.Data;
             if (result.Success)

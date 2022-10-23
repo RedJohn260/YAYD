@@ -2,3 +2,4 @@
 -x
 --audio-format mp3
 --add-metadata
+--audio-quality 0

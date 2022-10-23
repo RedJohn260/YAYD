@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YG4obXoTTY2foGsnY71YNrgNeBeBtCGCx+N7zKOjxi0=</dsig:DigestValue>
+        <dsig:DigestValue>+W10u8GkMn8apJFKp1XMToHVRinsNDW4l8xDoQsXI5M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -126,13 +126,13 @@
       <dsig:DigestValue>k/2kUoWn20OgMN0nFHBwTNffJkZb0S10i036N7NBusI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ytdl\yt-dlp.conf" size="47">
+  <file name="ytdl\yt-dlp.conf" size="66">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>krSaYz85TUZjMn1A6rNx2fm35FvIHstO4IcdQbMkKwQ=</dsig:DigestValue>
+      <dsig:DigestValue>G1EMTQN6WwnPiB1DW/8XbA4dGZlPI+DPTHKyI1CUNRc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ytdl\yt-dlp.exe" size="14013584">
