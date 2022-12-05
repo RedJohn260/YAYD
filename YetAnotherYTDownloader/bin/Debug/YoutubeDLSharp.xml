@@ -55,6 +55,13 @@
             Creates a new instance of class DownloadProgress.
             </summary>
         </member>
+        <member name="M:YoutubeDLSharp.Helpers.OSHelper.GetOSVersion">
+            <summary>
+            Gets the <see cref="T:YoutubeDLSharp.Helpers.OSVersion"/> depending on what platform you are on
+            </summary>
+            <returns>Returns the OS Version</returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
         <member name="T:YoutubeDLSharp.Helpers.ProcessExtensions">
             <summary>
             Process extensions for killing full process tree.
@@ -174,31 +181,6 @@
             Represents a set of options for youtube-dl.
             </summary>
         </member>
-        <member name="P:YoutubeDLSharp.Options.OptionSet.ApMso">
-            <summary>
-            Adobe Pass multiple-system operator (TV
-            provider) identifier, use --ap-list-mso
-            for a list of available MSOs
-            </summary>
-        </member>
-        <member name="P:YoutubeDLSharp.Options.OptionSet.ApUsername">
-            <summary>
-            Multiple-system operator account login
-            </summary>
-        </member>
-        <member name="P:YoutubeDLSharp.Options.OptionSet.ApPassword">
-            <summary>
-            Multiple-system operator account
-            password. If this option is left out,
-            youtube-dl will ask interactively.
-            </summary>
-        </member>
-        <member name="P:YoutubeDLSharp.Options.OptionSet.ApListMso">
-            <summary>
-            List all supported multiple-system
-            operators
-            </summary>
-        </member>
         <member name="P:YoutubeDLSharp.Options.OptionSet.Username">
             <summary>
             Login with this account ID
@@ -224,6 +206,31 @@
         <member name="P:YoutubeDLSharp.Options.OptionSet.VideoPassword">
             <summary>
             Video password (vimeo, youku)
+            </summary>
+        </member>
+        <member name="P:YoutubeDLSharp.Options.OptionSet.ApMso">
+            <summary>
+            Adobe Pass multiple-system operator (TV
+            provider) identifier, use --ap-list-mso
+            for a list of available MSOs
+            </summary>
+        </member>
+        <member name="P:YoutubeDLSharp.Options.OptionSet.ApUsername">
+            <summary>
+            Multiple-system operator account login
+            </summary>
+        </member>
+        <member name="P:YoutubeDLSharp.Options.OptionSet.ApPassword">
+            <summary>
+            Multiple-system operator account
+            password. If this option is left out,
+            youtube-dl will ask interactively.
+            </summary>
+        </member>
+        <member name="P:YoutubeDLSharp.Options.OptionSet.ApListMso">
+            <summary>
+            List all supported multiple-system
+            operators
             </summary>
         </member>
         <member name="F:YoutubeDLSharp.Options.OptionSet.Default">
@@ -1456,6 +1463,11 @@
         <member name="P:YoutubeDLSharp.YoutubeDLProcess.ExecutablePath">
             <summary>
             The path to the youtube-dl executable.
+            </summary>
+        </member>
+        <member name="P:YoutubeDLSharp.YoutubeDLProcess.UseWindowsEncodingWorkaround">
+            <summary>
+            Windows only. If set to true, start process via cmd.exe to support Unicode chars.
             </summary>
         </member>
         <member name="E:YoutubeDLSharp.YoutubeDLProcess.OutputReceived">
