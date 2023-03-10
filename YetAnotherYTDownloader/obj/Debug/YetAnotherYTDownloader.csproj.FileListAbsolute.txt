@@ -63,3 +63,4 @@ D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.exe.manifest
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.application
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.exe
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.pdb
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YoutubeDLSharp.pdb

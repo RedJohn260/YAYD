@@ -154,19 +154,20 @@ namespace YetAnotherYTDownloader
             ytdl.FFmpegPath = app_directory + ytdl_path + ffmpeg_app;
             // optional: set a different download folder
             ytdl.OutputFolder = destination_textbox.Text + @"\";
+            // audio options
+            var options = new OptionSet()
+            {
+                Format = "bestaudio/best",
+                AudioFormat = AudioConversionFormat.Mp3,
+                AudioQuality = 0,
+                Update = true
+            };
             // a progress handler with a callback that updates a progress bar
             var bar_progress = new Progress<DownloadProgress>((p) => showProgress(p));
             //Console.WriteLine(bar_progress.ToString());
             // a cancellation token source used for cancelling the download
             // use `cts.Cancel();` to perform cancellation
             cancelDownloadTokken = new CancellationTokenSource();
-            // audio options
-            var options = new OptionSet()
-            {
-                Format = "bestaudio/best",
-                AudioFormat = AudioConversionFormat.Mp3,
-                AudioQuality = 0
-            };
             // download a audio
             var result = await ytdl.RunAudioDownload(source_textbox.Text, AudioConversionFormat.Mp3, progress: bar_progress, ct: cancelDownloadTokken.Token, overrideOptions: options);
             // the path of the downloaded file
@@ -203,7 +204,14 @@ namespace YetAnotherYTDownloader
             var ytdl = new YoutubeDL();
             ytdl.YoutubeDLPath = app_directory + ytdl_path + ytdl_app;
             ytdl.FFmpegPath = app_directory + ytdl_path + ffmpeg_app;
-            var res1 = await ytdl.RunVideoDataFetch(source_textbox.Text);
+            var options = new OptionSet()
+            {
+                Format = "bestaudio/best",
+                AudioFormat = AudioConversionFormat.Mp3,
+                AudioQuality = 0,
+                Update = true
+            };
+            var res1 = await ytdl.RunVideoDataFetch(source_textbox.Text, overrideOptions: options);
             VideoData video = res1.Data;
             var songTitle = video.Title;
             WriteColorLine($"\n\nLink from: Youtube \nSong Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
