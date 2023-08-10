@@ -211,12 +211,27 @@ namespace YetAnotherYTDownloader
                 AudioQuality = 0,
                 Update = true
             };
-            var res1 = await ytdl.RunVideoDataFetch(source_textbox.Text, overrideOptions: options);
-            VideoData video = res1.Data;
-            var songTitle = video.Title;
-            WriteColorLine($"\n\nLink from: Youtube \nSong Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
-            textBox2.Text = songTitle;
-            textBox2.ForeColor = Color.OrangeRed;
+
+            try
+            {
+                var res1 = await ytdl.RunVideoDataFetch(source_textbox.Text, overrideOptions: options);
+                VideoData video = res1.Data;
+                string songTitle = video.Title;
+                WriteColorLine($"\n\nLink from: Youtube \nSong Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
+                textBox2.Text = songTitle;
+                textBox2.ForeColor = Color.OrangeRed;
+                await Task.Delay(1000);
+                throw new Exception("Video data not found exception.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception caught: {ex.Message}");
+            }
+            finally
+            {
+                textBox2.Text = "Song Title Not Found";
+                textBox2.ForeColor = Color.OrangeRed;
+            }
         }
 
         private void showProgress(DownloadProgress p)
