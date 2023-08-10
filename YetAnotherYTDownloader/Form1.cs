@@ -220,17 +220,10 @@ namespace YetAnotherYTDownloader
                 WriteColorLine($"\n\nLink from: Youtube \nSong Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
                 textBox2.Text = songTitle;
                 textBox2.ForeColor = Color.OrangeRed;
-                await Task.Delay(1000);
-                throw new Exception("Video data not found exception.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception caught: {ex.Message}");
-            }
-            finally
-            {
-                textBox2.Text = "Song Title Not Found";
-                textBox2.ForeColor = Color.OrangeRed;
+                WriteColorLineError($"Exception caught: {ex.Message}");
             }
         }
 
@@ -256,9 +249,9 @@ namespace YetAnotherYTDownloader
             {
                 isVideoDownloading = false;
             }
-            textBox1.Text =progress_state;
+            textBox1.Text = progress_state;
             downloadProgressBar.Value = (int)(p.Progress * 100.0f);
-            WriteColorLine( $"speed: {p.DownloadSpeed} | left: {p.ETA}\n", ConsoleColor.Magenta);
+            WriteColorLine($"speed: {p.DownloadSpeed} | left: {p.ETA}\n", ConsoleColor.Magenta);
             speedlb.Text = "Speed: " + p.DownloadSpeed;
             etalb.Text = "ETA: " + p.ETA;
         }
@@ -268,8 +261,9 @@ namespace YetAnotherYTDownloader
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            showconsole_chk.ImageIndex = 0;
-            ShowWindow(consoleHandle, SW_HIDE);
+            showconsole_chk.ImageIndex = 1;
+            ShowWindow(consoleHandle, SW_SHOW);
+            DownloadPrereqisites();
         }
 
         private void showconsole_chk_CheckedChanged_1(object sender, EventArgs e)
@@ -324,6 +318,105 @@ namespace YetAnotherYTDownloader
             string audioFolder = app_directory + @"audio\";
             SoundPlayer soundPlayer = new SoundPlayer(soundLocation: audioFolder + audioFileName);
             soundPlayer.Play();
+        }
+
+        private async void DownloadPrereqisites()
+        {
+            try
+            {
+                WriteColorLine("Checking if YtDlp.exe exists.", ConsoleColor.Yellow);
+                WriteColorLine("Checking if FFmpeg.exe exists.", ConsoleColor.Yellow);
+                if (!File.Exists(app_directory + ytdl_path + ytdl_app))
+                {
+                    DialogResult yt_dialog = MessageBox.Show("Download YtDlp.exe?", "Download", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    switch (yt_dialog)
+                    {
+                        case DialogResult.Yes:
+                            Task ytdl_download = YoutubeDLSharp.Utils.DownloadYtDlp(app_directory + ytdl_path);
+                            WriteColorLine("Downloading YtDlp.exe...\n" +
+                                "Please Wait...", ConsoleColor.Yellow);
+                            await ytdl_download;
+
+                            switch (ytdl_download.Status)
+                            {
+                                case TaskStatus.RanToCompletion:
+                                    WriteColorLine("YtDlp.exe downloaded successfully.", ConsoleColor.Green);
+                                    break;
+                                case TaskStatus.Faulted:
+                                    WriteColorLineError($"Downloading YtDlp.exe faulted with exception: {YoutubeDLSharp.Utils.DownloadYtDlp(app_directory + ytdl_path).Exception}");
+                                    MessageBox.Show($"Downloading YtDlp.exe faulted with exception: {YoutubeDLSharp.Utils.DownloadYtDlp(app_directory + ytdl_path).Exception}", "Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                                    break;
+                            }
+                            break;
+                        case DialogResult.No:
+                            WriteColorLineError("YtDlp.exe is required for this software to work correctly.");
+                            break;
+                        case DialogResult.Cancel:
+                            WriteColorLineError("YtDlp.exe is required for this software to work correctly.");
+                            break;
+                    }
+                }
+                else
+                {
+                    WriteColorLine("YtDlp.exe found!", ConsoleColor.Green);
+                }
+
+                if (!File.Exists(app_directory + ytdl_path + ffmpeg_app))
+                {
+
+                    DialogResult ff_dialog = MessageBox.Show("Download FFmpeg.exe?", "Download", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    switch (ff_dialog)
+                    {
+                        case DialogResult.Yes:
+                            Task ffmpeg_download = YoutubeDLSharp.Utils.DownloadFFmpeg(app_directory + ytdl_path);
+                            WriteColorLine("Downloading FFmpeg.exe...\n " +
+                                "Please Wait...", ConsoleColor.Yellow);
+                            await ffmpeg_download;
+
+                            switch (ffmpeg_download.Status)
+                            {
+                                case TaskStatus.Running:
+                                    WriteColorLine("Downloading FFmpeg.exe", ConsoleColor.Yellow);
+                                    break;
+                                case TaskStatus.RanToCompletion:
+                                    WriteColorLine("FFmpeg.exe downloaded successfully.", ConsoleColor.Green);
+                                    break;
+                                case TaskStatus.Faulted:
+                                    WriteColorLineError($"Downloading FFmpeg.exe faulted with exception: {YoutubeDLSharp.Utils.DownloadYtDlp(app_directory + ytdl_path).Exception}");
+                                    MessageBox.Show($"Downloading FFmpeg.exe faulted with exception: {YoutubeDLSharp.Utils.DownloadYtDlp(app_directory + ytdl_path).Exception}", "Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                                    break;
+                            }
+                            break;
+                        case DialogResult.No:
+                            WriteColorLineError("FFmpeg.exe is required for this software to work correctly.");
+                            break;
+                        case DialogResult.Cancel:
+                            WriteColorLineError("FFmpeg.exe is required for this software to work correctly.");
+                            break;
+                    }
+                }
+                else
+                {
+                    WriteColorLine("FFmpeg.exe found!", ConsoleColor.Green);
+                }
+            }
+            catch (Exception ex)
+            {
+                WriteColorLineError($"Exception caught: {ex.Message}");
+            }
+            finally
+            {
+                if (!File.Exists(app_directory + ytdl_path + ytdl_app) && !File.Exists(app_directory + ytdl_path + ffmpeg_app))
+                {
+                    MessageBox.Show("YtDlp & FFmpeg are missing. \n " +
+                    "Please download them manually and put them in this directory: \n " +
+                    app_directory + ytdl_path, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    WriteColorLine("YtDlp & FFmpeg are missing. \n " +
+                        "Please download them manually and put them in this directory: \n " +
+                        app_directory + ytdl_path, ConsoleColor.Yellow);
+                }
+            }
         }
     }
 }
