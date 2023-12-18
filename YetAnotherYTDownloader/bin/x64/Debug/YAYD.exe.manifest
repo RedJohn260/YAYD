@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="YAYD.exe" version="1.0.1.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="YAYD.exe" version="1.0.0.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
   <description asmv2:iconFile="YAYD_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="YAYD" version="1.0.1.1" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="YAYD" version="1.0.0.3" language="neutral" processorArchitecture="amd64" />
     <commandLine file="YAYD.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
       <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4eJ697B+7t9c5xqSVfBCKBam/FhJpIPGcU4bRyBE+p0=</dsig:DigestValue>
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -67,26 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YAYD.exe" size="2179072">
-      <assemblyIdentity name="YAYD" version="1.0.1.1" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YAYD.exe" size="595968">
+      <assemblyIdentity name="YAYD" version="1.0.0.3" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8thefp3euWpvy+QnemzB5TpVETWezMdc4xnKcIwv8tg=</dsig:DigestValue>
+        <dsig:DigestValue>UQihQhG8cHEUpFFXPX8a+BrUgwe7lyWwICKtT5w7hss=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YoutubeDLSharp.dll" size="139264">
-      <assemblyIdentity name="YoutubeDLSharp" version="1.0.0.23183" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YoutubeDLSharp.dll" size="88576">
+      <assemblyIdentity name="YoutubeDLSharp" version="0.4.3.22324" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tkOucfF74nrS4TwbHoBN644xRh4xk2WaqegLH3f9ZgE=</dsig:DigestValue>
+        <dsig:DigestValue>Ws8W6BkUR1FAizGzex3wNEQ4SrLpKdalGwaJP23sQps=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -117,6 +117,15 @@
       <dsig:DigestValue>0PdIBBUoVos6qOXuZuKlcEK7ooPbFX2xk5uevEhzx2A=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="ytdl\ffmpeg.exe" size="79434240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>k/2kUoWn20OgMN0nFHBwTNffJkZb0S10i036N7NBusI=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="ytdl\yt-dlp.conf" size="66">
     <hash>
       <dsig:Transforms>
@@ -124,6 +133,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>G1EMTQN6WwnPiB1DW/8XbA4dGZlPI+DPTHKyI1CUNRc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ytdl\yt-dlp.exe" size="14013584">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>V52PN6LS4vuPEAiQ9YVGLIVm6R9okHKMGL10FBdHiwg=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
