@@ -52,9 +52,16 @@
             this.showconsole_chk = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ver_label = new System.Windows.Forms.Label();
+            this.converttomp3_chk = new System.Windows.Forms.CheckBox();
+            this.convert_label = new System.Windows.Forms.Label();
             this.BtnStop = new ePOSOne.btnProduct.Custom_Button();
             this.BtnDownload = new ePOSOne.btnProduct.Custom_Button();
             this.BtnBrowse2 = new ePOSOne.btnProduct.Custom_Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.logo_picturebox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Notify_icon
@@ -69,9 +76,10 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(776, 37);
+            this.label1.Size = new System.Drawing.Size(780, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "Yet Another Youtube Downloader";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,7 +106,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(318, 24);
             this.label4.TabIndex = 7;
-            this.label4.Text = "© 2022 RedJohn260 All Rights Reversed";
+            this.label4.Text = "© 2024 RedJohn260 All Rights Reversed";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // openFileDialog1
@@ -114,7 +122,7 @@
             this.source_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.source_textbox.Location = new System.Drawing.Point(12, 98);
             this.source_textbox.Name = "source_textbox";
-            this.source_textbox.Size = new System.Drawing.Size(776, 28);
+            this.source_textbox.Size = new System.Drawing.Size(557, 28);
             this.source_textbox.TabIndex = 9;
             this.source_textbox.WordWrap = false;
             // 
@@ -128,7 +136,7 @@
             this.souce_label.Size = new System.Drawing.Size(776, 37);
             this.souce_label.TabIndex = 10;
             this.souce_label.Text = "Paste youtube video link:";
-            this.souce_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.souce_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // destination_label
             // 
@@ -140,7 +148,7 @@
             this.destination_label.Size = new System.Drawing.Size(776, 37);
             this.destination_label.TabIndex = 11;
             this.destination_label.Text = "Select save folder:";
-            this.destination_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.destination_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // destination_textbox
             // 
@@ -149,7 +157,7 @@
             this.destination_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.destination_textbox.Location = new System.Drawing.Point(12, 165);
             this.destination_textbox.Name = "destination_textbox";
-            this.destination_textbox.Size = new System.Drawing.Size(651, 28);
+            this.destination_textbox.Size = new System.Drawing.Size(440, 28);
             this.destination_textbox.TabIndex = 12;
             this.destination_textbox.WordWrap = false;
             // 
@@ -270,7 +278,7 @@
             this.showconsole_chk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showconsole_chk.ImageIndex = 0;
             this.showconsole_chk.ImageList = this.chk_imageList;
-            this.showconsole_chk.Location = new System.Drawing.Point(151, 417);
+            this.showconsole_chk.Location = new System.Drawing.Point(676, 93);
             this.showconsole_chk.Name = "showconsole_chk";
             this.showconsole_chk.Size = new System.Drawing.Size(66, 34);
             this.showconsole_chk.TabIndex = 22;
@@ -282,7 +290,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(9, 421);
+            this.label7.Location = new System.Drawing.Point(635, 66);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 24);
             this.label7.TabIndex = 7;
@@ -294,12 +302,43 @@
             this.ver_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ver_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.ver_label.ForeColor = System.Drawing.Color.Silver;
-            this.ver_label.Location = new System.Drawing.Point(223, 421);
+            this.ver_label.Location = new System.Drawing.Point(300, 421);
             this.ver_label.Name = "ver_label";
-            this.ver_label.Size = new System.Drawing.Size(241, 24);
+            this.ver_label.Size = new System.Drawing.Size(135, 24);
             this.ver_label.TabIndex = 7;
-            this.ver_label.Text = "Version : 1.0.1";
+            this.ver_label.Text = "Version : 1.0.1.0";
             this.ver_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // converttomp3_chk
+            // 
+            this.converttomp3_chk.Appearance = System.Windows.Forms.Appearance.Button;
+            this.converttomp3_chk.AutoSize = true;
+            this.converttomp3_chk.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.converttomp3_chk.FlatAppearance.BorderSize = 0;
+            this.converttomp3_chk.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.converttomp3_chk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.converttomp3_chk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.converttomp3_chk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.converttomp3_chk.ImageIndex = 0;
+            this.converttomp3_chk.ImageList = this.chk_imageList;
+            this.converttomp3_chk.Location = new System.Drawing.Point(676, 159);
+            this.converttomp3_chk.Name = "converttomp3_chk";
+            this.converttomp3_chk.Size = new System.Drawing.Size(66, 34);
+            this.converttomp3_chk.TabIndex = 23;
+            this.converttomp3_chk.UseVisualStyleBackColor = false;
+            this.converttomp3_chk.CheckedChanged += new System.EventHandler(this.converttomp3_chk_CheckedChanged);
+            // 
+            // convert_label
+            // 
+            this.convert_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convert_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.convert_label.ForeColor = System.Drawing.Color.Silver;
+            this.convert_label.Location = new System.Drawing.Point(635, 130);
+            this.convert_label.Name = "convert_label";
+            this.convert_label.Size = new System.Drawing.Size(132, 24);
+            this.convert_label.TabIndex = 24;
+            this.convert_label.Text = "Convert to MP3:";
+            this.convert_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BtnStop
             // 
@@ -358,7 +397,7 @@
             this.BtnBrowse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBrowse2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.BtnBrowse2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.BtnBrowse2.Location = new System.Drawing.Point(669, 165);
+            this.BtnBrowse2.Location = new System.Drawing.Point(458, 163);
             this.BtnBrowse2.Name = "BtnBrowse2";
             this.BtnBrowse2.OnHoverBorderColor = System.Drawing.Color.Cyan;
             this.BtnBrowse2.OnHoverButtonColor = System.Drawing.Color.Cyan;
@@ -370,6 +409,38 @@
             this.BtnBrowse2.UseVisualStyleBackColor = true;
             this.BtnBrowse2.Click += new System.EventHandler(this.BtnBrowse2_Click);
             // 
+            // label8
+            // 
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(6, 417);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(262, 33);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Yet Another Youtube Downloader";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // logo_picturebox
+            // 
+            this.logo_picturebox.Image = ((System.Drawing.Image)(resources.GetObject("logo_picturebox.Image")));
+            this.logo_picturebox.Location = new System.Drawing.Point(45, -6);
+            this.logo_picturebox.Name = "logo_picturebox";
+            this.logo_picturebox.Size = new System.Drawing.Size(80, 55);
+            this.logo_picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo_picturebox.TabIndex = 26;
+            this.logo_picturebox.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(676, -6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -379,6 +450,13 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(795, 454);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logo_picturebox);
+            this.Controls.Add(this.ver_label);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.convert_label);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.converttomp3_chk);
             this.Controls.Add(this.showconsole_chk);
             this.Controls.Add(this.downloadProgressBar);
             this.Controls.Add(this.BtnStop);
@@ -392,8 +470,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.souce_label);
             this.Controls.Add(this.source_textbox);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.ver_label);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -408,6 +484,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YAYD";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.logo_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,6 +517,11 @@
         private System.Windows.Forms.CheckBox showconsole_chk;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label ver_label;
+        private System.Windows.Forms.CheckBox converttomp3_chk;
+        private System.Windows.Forms.Label convert_label;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox logo_picturebox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
