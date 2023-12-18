@@ -44,7 +44,6 @@ D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\Newtonsoft.Json.xml
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\System.ValueTuple.xml
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YoutubeDLSharp.xml
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.AssemblyReference.cache
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.SuggestedBindingRedirects.cache
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Form1.resources
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Properties.Resources.resources
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.GenerateResource.cache
