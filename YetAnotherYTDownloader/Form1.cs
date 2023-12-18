@@ -25,6 +25,7 @@ namespace YetAnotherYTDownloader
         private IntPtr consoleHandle;
         private bool isVideoPostProcessing = false;
         private bool isVideoDownloading = false;
+        private bool convertToMp3 = false;
 
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -46,8 +47,10 @@ namespace YetAnotherYTDownloader
             consoleHandle = GetConsoleWindow();
             showconsole_chk.Checked = false;
             showconsole_chk.ImageIndex = 0;
+            converttomp3_chk.Checked = false;
+            converttomp3_chk.ImageIndex = 0;
             WriteColorLine("YAYD " + GetVersion + " Started!", ConsoleColor.Cyan);
-            ver_label.Text = "YAYD " + GetVersion;
+            ver_label.Text = GetVersion;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -107,7 +110,14 @@ namespace YetAnotherYTDownloader
                         speedlb.ForeColor = Color.DeepSkyBlue;
                         etalb.ForeColor = Color.Yellow;
                         await getSongTitle();
-                        await downloadSong();
+                        if (convertToMp3)
+                        {
+                            await downloadSong();
+                        }
+                        else
+                        {
+                            await downloadVideo();
+                        }
                     }
                     else
                     {
@@ -199,6 +209,62 @@ namespace YetAnotherYTDownloader
             }
         }
 
+        private async Task downloadVideo()
+        {
+            var ytdl = new YoutubeDL();
+            // set the path of the youtube-dl and FFmpeg if they're not in PATH or current directory
+            ytdl.YoutubeDLPath = app_directory + ytdl_path + ytdl_app;
+            ytdl.FFmpegPath = app_directory + ytdl_path + ffmpeg_app;
+            // optional: set a different download folder
+            ytdl.OutputFolder = destination_textbox.Text + @"\";
+            // audio options
+            var options = new OptionSet()
+            {
+                Format = "best",
+                AudioFormat = AudioConversionFormat.Best,
+                AudioQuality = 0,
+                CheckAllFormats = true,
+                FfmpegLocation = app_directory + ytdl_path + ffmpeg_app,
+                Update = true
+            };
+            // a progress handler with a callback that updates a progress bar
+            var bar_progress = new Progress<DownloadProgress>((p) => showProgress(p));
+            //Console.WriteLine(bar_progress.ToString());
+            // a cancellation token source used for cancelling the download
+            // use `cts.Cancel();` to perform cancellation
+            cancelDownloadTokken = new CancellationTokenSource();
+            // download a audio
+            //var result = await ytdl.RunAudioDownload(source_textbox.Text, AudioConversionFormat.Mp3, progress: bar_progress, ct: cancelDownloadTokken.Token, overrideOptions: options);
+            var result = await ytdl.RunVideoDownload(source_textbox.Text, progress: bar_progress, ct: cancelDownloadTokken.Token, overrideOptions: options);
+            // the path of the downloaded file
+            string path = result.Data;
+            if (result.Success)
+            {
+                cancelDownloadTokken.Cancel();
+                textBox1.Text = "Processing Finished!";
+                MessageBox.Show("Video Postprocessing Finished!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //textBox1.ForeColor = Color.Red;
+                speedlb.Text = "Speed: " + "0.0 KB/S";
+                speedlb.ForeColor = Color.Red;
+                etalb.Text = "ETA: " + "00:00";
+                etalb.ForeColor = Color.Red;
+                textBox2.Text = "";
+            }
+            else
+            {
+                cancelDownloadTokken.Cancel();
+                textBox1.Text = "Download Error !!!";
+                textBox1.ForeColor = Color.Red;
+                speedlb.Text = "Speed: " + "0.0 KB/S";
+                speedlb.ForeColor = Color.Red;
+                etalb.Text = "ETA: " + "00:00";
+                etalb.ForeColor = Color.Red;
+                showErrorMessage(source_textbox.Text, String.Join("\n", result.ErrorOutput));
+                Console.WriteLine(($"Failed to process '{source_textbox.Text}'. Output:\n\n{result.ErrorOutput}", "YoutubeDLSharp - ERROR"));
+                textBox2.Text = "";
+            }
+        }
+
         private async Task getSongTitle()
         {
             var ytdl = new YoutubeDL();
@@ -217,7 +283,7 @@ namespace YetAnotherYTDownloader
                 var res1 = await ytdl.RunVideoDataFetch(source_textbox.Text, overrideOptions: options);
                 VideoData video = res1.Data;
                 string songTitle = video.Title;
-                WriteColorLine($"\n\nLink from: Youtube \nSong Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
+                WriteColorLine($"\n\nLink from: Youtube \nVideo Name: {video.Title}\nChannel Name: {video.Channel}\nLikes: {video.LikeCount}\n\n", ConsoleColor.DarkYellow);
                 textBox2.Text = songTitle;
                 textBox2.ForeColor = Color.OrangeRed;
             }
@@ -416,6 +482,22 @@ namespace YetAnotherYTDownloader
                         "Please download them manually and put them in this directory: \n " +
                         app_directory + ytdl_path, ConsoleColor.Yellow);
                 }
+            }
+        }
+        private void converttomp3_chk_CheckedChanged(object sender, EventArgs e)
+        {
+            PlaySound("SoundBT1.wav");
+            if (converttomp3_chk.Checked)
+            {
+                converttomp3_chk.ImageIndex = 1;
+                convertToMp3 = true;
+                WriteColorLine("Convert video to mp3 enabled!", ConsoleColor.Green);
+            }
+            else
+            {
+                converttomp3_chk.ImageIndex = 0;
+                convertToMp3 = false;
+                WriteColorLine("Convert video to mp3 disabled!", ConsoleColor.Red);
             }
         }
     }
