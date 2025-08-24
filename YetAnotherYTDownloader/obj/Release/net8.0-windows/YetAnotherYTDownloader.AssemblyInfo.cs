@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YetAnotherYTDownloader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6b38cacd8b5c125995dbd99bd9ff50900f87034")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97996d175120986f50424505584ccaa78e8a684a")]
 [assembly: System.Reflection.AssemblyProductAttribute("YetAnotherYTDownloader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YetAnotherYTDownloader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

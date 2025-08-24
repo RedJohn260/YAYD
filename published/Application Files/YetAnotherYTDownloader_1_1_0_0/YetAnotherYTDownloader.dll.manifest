@@ -81,13 +81,13 @@
       <dsig:DigestValue>DyfB3ktbINu9c/N/AoZjKxMGRnlLDE3FIhnXRFbxLqw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="YetAnotherYTDownloader.dll" size="216064">
+  <file name="YetAnotherYTDownloader.dll" size="215040">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>coYh/gebPTxct3ZlA8eNX+s8QMS+Mzdgm6iZ7VOxJf4=</dsig:DigestValue>
+      <dsig:DigestValue>DfPnFe418TX0LmG2terzNmtR/qAeS+qkv6GkBQYsaMU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="YetAnotherYTDownloader.dll.config" size="77">
@@ -99,13 +99,13 @@
       <dsig:DigestValue>sRXPO8NcIiuVI4ajMrs7gnxty0j6ChK7OorE6bM0xfQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="YetAnotherYTDownloader.exe" size="337408">
+  <file name="YetAnotherYTDownloader.exe" size="336896">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>y8ot5XXvHxpYa09ntKK2ENN+UUooF6X+C+nR4d3PwDM=</dsig:DigestValue>
+      <dsig:DigestValue>PpT0YDHbdedjQmkUYttdgbt8NRQI3H964OcLaIf6uF0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="YetAnotherYTDownloader.runtimeconfig.json" size="515">
