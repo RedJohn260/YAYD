@@ -1,0 +1,8 @@
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.exe
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.dll
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.deps.json
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.runtimeconfig.json
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.dll.config
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.pdb
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\Newtonsoft.Json.dll
+C:\Users\RedJohn260\Desktop\YAYD_WPF\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YoutubeDLSharp.dll

@@ -1,0 +1,8 @@
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.exe
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.dll
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.deps.json
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.runtimeconfig.json
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.dll.config
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YetAnotherYTDownloader.pdb
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\Newtonsoft.Json.dll
+D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Release\net8.0-windows\app.publish\YoutubeDLSharp.dll
