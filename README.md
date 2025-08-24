@@ -2,7 +2,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/RedJohn260/YAYD?style=social) ![GitHub forks](https://img.shields.io/github/forks/RedJohn260/YAYD?style=social) ![GitHub issues](https://img.shields.io/github/issues/RedJohn260/YAYD) ![GitHub release](https://img.shields.io/github/v/release/RedJohn260/YAYD) ![GitHub release date](https://img.shields.io/github/release-date/RedJohn260/YAYD) ![GitHub tag](https://img.shields.io/github/v/tag/RedJohn260/YAYD) ![GitHub top language](https://img.shields.io/github/languages/top/RedJohn260/YAYD) [![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-blue)](https://github.com/RedJohn260/YAYD/releases/latest/download/YetAnotherYTDownloader.application)
 
 
-YetAnotherYTDownloader is a **WPF application** that uses **YoutubeDLSharp**, **yt-dlp**, and **FFmpeg** for audio video stuff.
+YAYD is a **WPF application** that uses **YoutubeDLSharp**, **yt-dlp**, and **FFmpeg** for audio video stuff.
 
 ## Features
 - Automatic download of **yt-dlp** and **FFmpeg**.
