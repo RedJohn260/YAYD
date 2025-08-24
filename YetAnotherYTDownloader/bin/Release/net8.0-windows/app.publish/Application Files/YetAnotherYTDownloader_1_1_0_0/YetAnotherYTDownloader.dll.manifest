@@ -87,7 +87,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>H3UHggC9BH74w9o+KmA+4eo4r5RGghZGZzZroULp20s=</dsig:DigestValue>
+      <dsig:DigestValue>coYh/gebPTxct3ZlA8eNX+s8QMS+Mzdgm6iZ7VOxJf4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="YetAnotherYTDownloader.dll.config" size="77">
@@ -105,7 +105,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5lp7ZQbwW1yXZD3ajabjeNuhcpvvS6le3kAUJ/xDVZA=</dsig:DigestValue>
+      <dsig:DigestValue>y8ot5XXvHxpYa09ntKK2ENN+UUooF6X+C+nR4d3PwDM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="YetAnotherYTDownloader.runtimeconfig.json" size="515">

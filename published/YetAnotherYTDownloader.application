@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="https://raw.githubusercontent.com/RedJohn260/YAYD/main/published/YetAnotherYTDownloader.application" />
+    <deploymentProvider codebase="https://raw.githubusercontent.com/RedJohn260/YAYD/main/publish/YetAnotherYTDownloader.application/YetAnotherYTDownloader.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tjYOTbcYcghdwVG/qIo/BUqUO+jlU/LWNZarDdaeQzM=</dsig:DigestValue>
+        <dsig:DigestValue>tPl3YZHXS76C4e2i6fTnUjl1x4ViuB01sclxSfeH7v0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
