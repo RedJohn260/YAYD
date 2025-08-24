@@ -48,7 +48,6 @@ D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Form1.r
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.Properties.Resources.resources
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.GenerateResource.cache
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CoreCompileInputs.cache
-D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnotherYTDownloader.csproj.CopyComplete
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\audio\soundBT1.wav
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YAYD.exe.config
 D:\LocalGit\YAYD\YetAnotherYTDownloader\bin\Debug\YAYD.exe.manifest
@@ -60,3 +59,4 @@ D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.exe.manifest
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.application
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.exe
 D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YAYD.pdb
+D:\LocalGit\YAYD\YetAnotherYTDownloader\obj\Debug\YetAnoth.0EF96A6E.Up2Date
